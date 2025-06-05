@@ -8,6 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://giftreco.com"),
   title: "GiftReco - Topluluk Destekli Hediye Önerileri",
   description:
     "Gerçek kullanıcıların deneyimleriyle en iyi hediye fikirlerini keşfedin. Sosyal kanıt ile desteklenen, güvenilir hediye önerileri.",
