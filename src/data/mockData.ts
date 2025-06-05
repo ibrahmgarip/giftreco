@@ -39,45 +39,6 @@ export const badges: Badge[] = [
   },
 ];
 
-export const mockUsers: User[] = [
-  {
-    id: "1",
-    username: "aysel_k",
-    email: "aysel@example.com",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150",
-    joinDate: "2024-01-15",
-    points: 1250,
-    badges: [badges[0], badges[1]],
-    submittedGifts: 23,
-    helpfulVotes: 145,
-  },
-  {
-    id: "2",
-    username: "mehmet_design",
-    email: "mehmet@example.com",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-    joinDate: "2024-02-20",
-    points: 890,
-    badges: [badges[2]],
-    submittedGifts: 15,
-    helpfulVotes: 67,
-  },
-  {
-    id: "3",
-    username: "zeynep_gifts",
-    email: "zeynep@example.com",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
-    joinDate: "2024-03-10",
-    points: 2100,
-    badges: [badges[0], badges[1], badges[2]],
-    submittedGifts: 42,
-    helpfulVotes: 234,
-  },
-];
-
 export const categories: GiftCategory[] = [
   {
     id: "handmade",
@@ -167,6 +128,47 @@ export const interests: Interest[] = [
   { id: "diy", name: "Kendin Yap", icon: "🔧" },
 ];
 
+// Create users without circular references
+export const mockUsers: User[] = [
+  {
+    id: "1",
+    username: "aysel_k",
+    email: "aysel@example.com",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150",
+    joinDate: "2024-01-15",
+    points: 1250,
+    badges: [badges[0], badges[1]],
+    submittedGifts: 23,
+    helpfulVotes: 145,
+  },
+  {
+    id: "2",
+    username: "mehmet_design",
+    email: "mehmet@example.com",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+    joinDate: "2024-02-20",
+    points: 890,
+    badges: [badges[2]],
+    submittedGifts: 15,
+    helpfulVotes: 67,
+  },
+  {
+    id: "3",
+    username: "zeynep_gifts",
+    email: "zeynep@example.com",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
+    joinDate: "2024-03-10",
+    points: 2100,
+    badges: [badges[0], badges[1], badges[2]],
+    submittedGifts: 42,
+    helpfulVotes: 234,
+  },
+];
+
+// Create gifts with proper references (no circular dependencies)
 export const mockGifts: Gift[] = [
   {
     id: "1",
@@ -228,69 +230,6 @@ export const mockGifts: Gift[] = [
     occasion: [occasions[0], occasions[9]],
     recipient: [recipients[5], recipients[6]],
     interests: [interests[8], interests[6]],
-    verified: true,
-    featured: false,
-  },
-  {
-    id: "4",
-    title: "Aromaterapi Difüzör Seti",
-    description:
-      "Rahatlatıcı aromalar için özel yağlar ile birlikte gelen şık difüzör. LED ışık özelliği ile gece lambası olarak da kullanılabilir.",
-    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400",
-    price: "₺120",
-    affiliateLink: "https://example.com/affiliate/aromatherapy",
-    submittedBy: mockUsers[0],
-    submittedDate: "2024-11-08",
-    upvotes: 41,
-    downvotes: 0,
-    comments: [],
-    tags: ["aromaterapi", "rahatlatıcı", "yağ", "wellness"],
-    category: categories[6],
-    occasion: [occasions[1], occasions[6]],
-    recipient: [recipients[2], recipients[0]],
-    interests: [interests[3]],
-    verified: true,
-    featured: true,
-  },
-  {
-    id: "5",
-    title: "Vintage Deri Seyahat Günlüğü",
-    description:
-      "Seyahat anılarını kaydetmek için özel tasarlanmış deri kapakli günlük. Harita baskılı sayfalari ve çizilebilir alanları ile.",
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400",
-    price: "₺95",
-    affiliateLink: "https://example.com/affiliate/travel-journal",
-    submittedBy: mockUsers[1],
-    submittedDate: "2024-11-05",
-    upvotes: 35,
-    downvotes: 1,
-    comments: [],
-    tags: ["deri", "günlük", "seyahat", "vintage"],
-    category: categories[4],
-    occasion: [occasions[3], occasions[0]],
-    recipient: [recipients[3], recipients[6]],
-    interests: [interests[4], interests[1]],
-    verified: true,
-    featured: false,
-  },
-  {
-    id: "6",
-    title: "Organik Çikolata Yapım Kiti",
-    description:
-      "Evde organik çikolata yapımı için gereken tüm malzemeler. Çocuklar ve yetişkinler için eğlenceli aktivite.",
-    image: "https://images.unsplash.com/photo-1481391146645-d58b6689e6b5?w=400",
-    price: "₺78",
-    affiliateLink: "https://example.com/affiliate/chocolate-kit",
-    submittedBy: mockUsers[2],
-    submittedDate: "2024-11-02",
-    upvotes: 29,
-    downvotes: 2,
-    comments: [],
-    tags: ["organik", "çikolata", "kit", "aktivite"],
-    category: categories[5],
-    occasion: [occasions[0], occasions[7]],
-    recipient: [recipients[5], recipients[3]],
-    interests: [interests[0]],
     verified: true,
     featured: false,
   },
