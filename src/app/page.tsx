@@ -10,6 +10,7 @@ import {
   Filter as FilterIcon,
   Grid3X3,
   List,
+  Gift as GiftIcon,
 } from "lucide-react";
 import Header from "@/components/Header";
 import GiftCard from "@/components/GiftCard";
