@@ -343,7 +343,7 @@ export default function Homepage() {
             {filteredGifts.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-gray-400 mb-4">
-                  <Gift className="w-16 h-16 mx-auto" />
+                  <GiftIcon className="w-16 h-16 mx-auto" />
                 </div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
                   Aradığınız kriterlerde hediye bulunamadı
